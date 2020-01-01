@@ -7,6 +7,7 @@ import Container from './container';
 window.onload = () => {
   const el = document.getElementById('root');
   if (el) {
+    // $FlowIgnore: React.ComponentType で怒られるので無視する
     ReactDOM.render(<Container />, el);
   }
 };
