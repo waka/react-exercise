@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script>
+      const GLOBAL = {};
+      GLOBAL.date = '2020-01-01';
+      GLOBAL.users = [{ name: 'foo', email: 'foo@bar.com' }];
+      GLOBAL.items = ['apple', 'orange', 'watermelon'];
+      window.GLOBAL = GLOBAL;
+    </script>
+  </body>
+</html>
