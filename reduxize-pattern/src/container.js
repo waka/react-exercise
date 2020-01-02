@@ -1,19 +1,21 @@
 // @flow
 
 import React from 'react';
-import { Container as FluxContainer } from 'flux/utils';
+import { Container as FluxContainer } from './utils';
+
+import TodoStore from './flux/stores/todo_store';
 
 class Container extends React.Component<{}, {}> {
   static getStores() {
-    return [];
+    return [TodoStore];
   }
 
   static calculateState() {
-    return {};
+    return { todo: TodoStore.getState() };
   }
 
   render() {
-    return <div />;
+    return <div>hoge</div>;
   }
 }
 
