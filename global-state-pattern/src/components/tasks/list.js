@@ -1,11 +1,11 @@
 // @flow
 
 import React, { useContext } from 'react';
-import { Store } from '../../flux/stores/global_store';
+import { GlobalStore } from '../../flux/stores/global_store';
 import ListItem from './list_item';
 
 const List: React.FC = () => {
-  const { state } = useContext(Store);
+  const { state } = useContext(GlobalStore);
   const { date, users } = state;
 
   return (
