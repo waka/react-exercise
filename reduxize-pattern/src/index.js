@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Container from './container';
+import Container from './container_refactor';
 
 window.onload = () => {
   const el = document.getElementById('root');

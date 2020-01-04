@@ -12,20 +12,20 @@ export type State = {|
 const reducer = (state = {}, _action): State => state;
 
 // Usage:
-//   const { state, dispatch } = useContext(Store);
-const Store = React.createContext();
+//   const { state, dispatch } = useContext(GlobalStore);
+const GlobalStore = React.createContext();
 
 // Usage:
-//   <Provider>
+//   <GlobalStateProvider>
 //     <AnyComponent />
-//   </Provider>
-const Provider = ({ children }) => {
+//   </GlobalStateProvider>
+const GlobalStateProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, window.GLOBAL);
   return (
-    <Store.Provider value={{ state, dispatch }}>
+    <GlobalStore.Provider value={{ state, dispatch }}>
       {children}
-    </Store.Provider>
+    </GlobalStore.Provider>
   );
 };
 
-export { Store, Provider };
+export { GlobalStore, GlobalStateProvider };
